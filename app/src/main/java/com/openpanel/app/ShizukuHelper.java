@@ -28,7 +28,7 @@ public class ShizukuHelper {
             return false;
         }
         try {
-            if (Shizuku.isPre_V11()) {
+            if (Shizuku.getVersion() < 11) {
                 return false;
             }
             return Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED;
@@ -56,7 +56,14 @@ public class ShizukuHelper {
         int exitCode = -1;
 
         try {
-            Process process = Shizuku.newProcess(new String[]{"sh", "-c", command}, null, null);
+            Process process;
+        try {
+            java.lang.reflect.Method m = Shizuku.class.getDeclaredMethod("newProcess", String[].class, String[].class, String.class);
+            m.setAccessible(true);
+            process = (Process) m.invoke(null, new String[]{"sh", "-c", command}, null, null);
+        } catch (Throwable t) {
+            throw new RuntimeException("Failed to invoke Shizuku newProcess", t);
+        }
             
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
