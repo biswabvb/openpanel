@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Open Panel</string>
+    <string name="title_home">ABCD PANEL</string>
+    <string name="subtitle_home">SECURED BY SHIZUKU INJECTOR</string>
+    <string name="btn_inject">INJECT</string>
+    <string name="btn_inject_subtext">Tap INJECT to start Free Fire HUD</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_settings">Settings</string>
+    <string name="status_ready">INJECTOR READY</string>
+    
+    <!-- Settings strings -->
+    <string name="settings_title">Setup &amp; Config</string>
+    <string name="install_config_title">Install Config</string>
+    <string name="install_config_desc">Install the required config file so ABCD PANEL can attach to Free Fire. One tap.</string>
+    <string name="btn_install">Install config</string>
+    <string name="btn_remove">Remove config</string>
+    <string name="status_online">ONLINE</string>
+    <string name="status_offline">OFFLINE</string>
+    <string name="status_setup_needed">SETUP NEEDED</string>
+    <string name="status_installed">CONFIG INSTALLED</string>
+    
+    <!-- Shizuku & Permissions -->
+    <string name="shizuku_not_running_title">Shizuku Service Required</string>
+    <string name="shizuku_not_running_msg">Shizuku is not running on your device.\n\nPlease open the Shizuku app, start the service (using Wireless Debugging or Root), and return here.</string>
+    <string name="shizuku_permission_title">Grant Shizuku Permission</string>
+    <string name="shizuku_permission_msg">ABCD PANEL requires Shizuku permission to safely configure files.\n\nPlease tap \'Grant\' and allow Shizuku access.</string>
+    <string name="overlay_permission_title">Display Over Other Apps</string>
+    <string name="overlay_permission_msg">ABCD PANEL needs \'Display over other apps\' permission to show the floating menu HUD over the game.</string>
+    <string name="storage_permission_title">Storage Access Permission</string>
+    <string name="storage_permission_msg">ABCD PANEL requires All Files Access to write and manage config files.</string>
+    <string name="btn_grant">Grant</string>
+    <string name="btn_open_shizuku">Open Shizuku</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>

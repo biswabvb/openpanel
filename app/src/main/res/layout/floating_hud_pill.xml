@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floatingRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Compact Floating Icon (When Collapsed) -->
+    <LinearLayout
+        android:id="@+id/layoutFloatingIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/logo_square_bg"
+        android:gravity="center"
+        android:elevation="12dp">
+
+        <TextView
+            android:id="@+id/ivFloatingLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OP"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Expanded Floating Menu (When Tapped) -->
+    <LinearLayout
+        android:id="@+id/layoutFloatingMenu"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/floating_menu_bg"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:elevation="14dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCD PANEL"
+                android:textColor="@color/accent_glow"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:id="@+id/tvCloseMenu"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="✕"
+                android:textColor="@color/text_muted"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#334155"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Status Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="STATUS"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatusVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE / ONLINE"
+                android:textColor="@color/status_online"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Expiry Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="EXPIRES"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvExpiryVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PERMANENT / NO KEY"
+                android:textColor="@color/accent_glow"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Seller Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SELLER"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSellerVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OPEN SOURCE"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Features Overview Pill -->
+        <LinearLayout
+            android:id="@+id/layoutReasonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/status_pill_bg"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvReasonVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AIM SILENT • LOCATION • BYPASS"
+                android:textColor="@color/text_primary"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Quick Toggle / Close Overlay Button -->
+        <Button
+            android:id="@+id/btnHideOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/status_pill_bg"
+            android:text="Minimize Pill"
+            android:textColor="@color/accent_glow"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
